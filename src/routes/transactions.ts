@@ -35,7 +35,7 @@ export async function transactionsRoutes(app: FastifyInstance) {
 
       const { id } = getTransactionParamsSchema.parse(request.params)
 
-      const tansaction = await knex('transactions')
+      const transaction = await knex('transactions')
         .select()
         .where({
           id,
@@ -43,7 +43,7 @@ export async function transactionsRoutes(app: FastifyInstance) {
         })
         .first()
 
-      return { tansaction }
+      return { transaction }
     }
   )
 
