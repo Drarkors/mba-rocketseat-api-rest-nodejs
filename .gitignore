@@ -131,5 +131,7 @@ dist
 .pnp.*
 
 # DB files
-db/app.db
-db/test.db
+db/*.db
+
+# Build folder
+build
